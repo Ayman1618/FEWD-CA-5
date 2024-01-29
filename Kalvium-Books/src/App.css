@@ -1,0 +1,46 @@
+body{
+  background-color: rgb(228, 241, 254);
+}
+.nav{
+    margin-top: -26vw;
+    margin-left: 0vw;
+    width: 100vw;
+    height: 4.5vw;
+    color: black;
+    display: flex;
+    box-shadow: 0 1px 0 rgb(136, 136, 136) ;
+    background-color: azure;
+}
+
+#search-bar {
+  position: absolute;
+  background-color: rgb(197, 208, 217);
+  margin-left: 24vw;
+  margin-top: 0.8vw;
+  width: 30vw;
+  color: black;
+  height: 2.4vw;
+  box-shadow: 0 2.7px 4px rgba(130, 129, 129, 0.5); 
+}
+
+#search-bar::placeholder{
+  text-align: center;
+}
+
+
+#kalvium-books{
+  margin-left: 0.3vw;
+  margin-top: 1vw;
+}
+
+.register{
+  margin-left: 74vw;
+  margin-top: 0.8vw;
+  height: 3.2vw;
+  color: rgb(231, 239, 239);
+  background-color: rgb(103, 50, 50);
+}
+
+.logo{
+  margin-top: 1vw;
+}
