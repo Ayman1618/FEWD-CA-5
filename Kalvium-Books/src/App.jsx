@@ -1,15 +1,16 @@
-import { useState } from 'react'
 import './App.css'
 import MainPage from './components/MainPage'
+import RegisterForm from './components/RegisterForm'
+import { Routes ,Route } from 'react-router-dom'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <MainPage />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/Register" element={<RegisterForm />} />
+    </Routes>
   )
 }
 

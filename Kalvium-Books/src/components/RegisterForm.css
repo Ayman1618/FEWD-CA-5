@@ -2,23 +2,60 @@ body{
     background-color: rgb(220, 242, 245);
   }
   
+  .reg-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 36.8vw;
+    font-size: xx-large;
+    margin-top: -2vw;
+  }
   
-  .all{
+  .app{
     margin-left: 36vw;
     border: 2px solid white;
     height: 33vw;
     width: 33vw;
+    box-shadow: 4px 4px 4px black;
     border-radius: 8px;
-    background-color: rgb(169, 251, 224);
+    background-color: rgb(200, 245, 231);
+    height: auto;
   }
   
   form{
-    margin-left: 10vw;
-    margin-top: 5vw;
+    width: calc(100% - 50px);
+    margin-top: 4vw;
+    margin-left: 1vw;
+    display: flex;
+    row-gap: 0.05vw;
+    justify-content: center;
+    flex-direction: column;
+    
   }
   
   input{
     background-color: aliceblue;
     color: black;
   }
-      
+
+  div.App{
+    height: auto;
+  }
+
+  label{
+    margin-right: 1vw;
+    padding-top: 0.7vw;
+  }
+
+  p.error-text{
+    padding: 0;
+    margin: 0;
+    color: rgb(216, 24, 24);
+  }
+
+  .submit-button{
+    margin-top: 1.2vw;
+    margin-left: 6vw;
+    margin-right: 4vw;
+    margin-bottom: 1.3vw;
+  }
