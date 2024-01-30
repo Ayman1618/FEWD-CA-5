@@ -86,8 +86,9 @@ export default function RegisterForm() {
         ) {
             setRegistrationSuccess(true);
             navigate("/");
-            sessionStorage.setItem("registrationSuccess", "true");
+            
         }
+        console.log(data)
     };
 
     return (

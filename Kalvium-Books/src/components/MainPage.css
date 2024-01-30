@@ -1,9 +1,14 @@
 *{
     color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: auto;
 }
 
 .main{
-    height: 150vw;
     margin-top: 26vw;
     max-width: fit-content;
 }
