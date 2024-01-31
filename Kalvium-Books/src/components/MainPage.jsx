@@ -5,11 +5,14 @@ import "./MainPage.css";
 import logo from '../assets/downloadd.png'
 import { Link } from 'react-router-dom';
 
+// Functional component for the main page
 export default function MainPage() {
+    // State variables for managing the registration form, book data, and search query
   const [registerationForm, setShowRegisterForm] = useState(false);
   const [myData, setMyData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
+   // Fetch book data from the API on component mount
   useEffect(() => {
     axios.get("https://reactnd-books-api.udacity.com/books", {
       headers: {
@@ -26,16 +29,21 @@ export default function MainPage() {
       });
   }, []);
 
+ // Filter books based on the search query
   const filteredBooks = myData.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
+  
+  // JSX rendering for the main pag
   return (
     <div className='main'>
+
+      {/* Navigation bar */}
       <nav className='nav'>
         <img className="logo" src={logo} alt="logo" />
         <span id='kalvium-books'>Kalvium Books</span>
         <span>
+          {/* Search bar */}
           <input
             id='search-bar'
             type="text"
@@ -44,8 +52,10 @@ export default function MainPage() {
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </span>
+        {/* Registration link */}
         <Link to="/Register" className="register">Register</Link>
       </nav>
+      {/* Displaying filtered books and registration form if needed */}
       <div className="books">
         {filteredBooks.map((book) => (
           <div key={book.id} className='onebook'>
@@ -57,6 +67,7 @@ export default function MainPage() {
             </div>
           </div>
         ))}
+        {/* Display registration form conditionally */}
         {registerationForm && <RegisterForm />}
       </div>
     </div>

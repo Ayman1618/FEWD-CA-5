@@ -65,6 +65,7 @@ div.onebook{
     object-fit: cover;
     background-color: rgb(216, 230, 242);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .onebook:hover {

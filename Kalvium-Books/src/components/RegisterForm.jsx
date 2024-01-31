@@ -4,9 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import '../components/RegisterForm.css';
 
 export default function RegisterForm() {
+    // Hook for navigation in React Router
     const navigate = useNavigate();
+    
+    // Form hook from react-hook-form
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
 
+     // State for handling alerts and registration success
     const [alerts, setAlerts] = useState({
         firstName: '',
         lastName: '',
@@ -17,7 +21,7 @@ export default function RegisterForm() {
     });
 
     const [registrationSuccess, setRegistrationSuccess] = useState(false);
-
+    // State for handling focus state of form inputs
     const [focusState, setFocusState] = useState({
         firstName: false,
         lastName: false,
@@ -27,13 +31,15 @@ export default function RegisterForm() {
         confirmPassword: false,
     });
 
+    // Function to handle input focus
     const handleFocus = (name) => {
         setFocusState((prevFocusState) => ({ ...prevFocusState, [name]: true }));
     };
 
+    // Function to handle form submission
     const onSubmit = (data) => {
         const newAlerts = {};
-
+        // Validation and alert messages for form fields
         if (data.firstName === '') {
             newAlerts.firstName = 'Please enter your first name.';
         } else {
@@ -76,6 +82,8 @@ export default function RegisterForm() {
 
         setAlerts(newAlerts);
 
+        // If all fields are valid, set registration success to true 
+        // and navigate to home page
         if (
             newAlerts.firstName === '' &&
             newAlerts.lastName === '' &&
@@ -109,6 +117,7 @@ export default function RegisterForm() {
                         }}
                     >Registration Successful!!</div>
                 )}
+                {/*input fields of the forms*/}
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>Name:</label>
                     <input
