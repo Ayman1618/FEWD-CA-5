@@ -18,7 +18,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
-    margin-top: 2vw;
+    margin-top: 0vw;
 }
 
 .logo{
@@ -27,8 +27,7 @@ body{
 }
 
 .nav{
-    display: flex;
-    
+    display: flex;    
 }
 
 #kalvium-books{
@@ -43,10 +42,20 @@ body{
 }
 
 .register{
+    display: flex;
+    align-items: center;
     height: 2.5vw;
     width: 6vw;
     border-radius: 8px;
     text-align: center;
+    justify-content: center;
+}
+
+.register:hover{
+    box-shadow: rgb(51, 51, 51) 2px 2px 0px;
+    transform: translate(-1px, -1px);
+    transition-duration: 0s; 
+    background-color: brown;
 }
 
 div.onebook{
@@ -62,8 +71,6 @@ div.onebook{
     background-color: #c2ece7;
     box-shadow: 0px 3vw 6vw rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
-   
-  
   }
 
 img#book-image{
@@ -71,9 +78,11 @@ img#book-image{
 }
 
 .books {
+    margin-top: 2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 
 .onebook {
@@ -113,3 +122,10 @@ div.books{
        flex-wrap: wrap;
     
 }
+
+nav.nav{
+    /* position: absolute; */
+}
+
+
+

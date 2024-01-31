@@ -85,6 +85,7 @@ export default function RegisterForm() {
             newAlerts.confirmPassword === ''
         ) {
             setRegistrationSuccess(true);
+            alert('Registration Successful! Stay tuned to our latest.')
             navigate("/");
             
         }

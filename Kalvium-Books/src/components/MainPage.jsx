@@ -26,10 +26,6 @@ export default function MainPage() {
       });
   }, []);
 
-  const handleClick = () => {
-    setShowRegisterForm(true);
-  };
-
   const filteredBooks = myData.filter(book =>
     book.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
